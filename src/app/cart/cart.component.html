@@ -1,0 +1,32 @@
+<app-not-found [visible]="!cartItems" message="No Cart items exist" reset="Go To home page"></app-not-found>
+<div class="my-5 d-flex justify-content-between " *ngIf="cartItems">
+  <div class="table-container w-75 ">
+    <table class="table">
+      <tbody class="text-center align-middle">
+        <tr *ngFor="let item of cartItems" class="">
+          <td class=""><img [src]="item.imageUrl"></td>
+          <td>{{item.name}}</td>
+          <td><input type="number" min="1" class="w-25" [value]="item.amount" (input)="showAmount($event,item)"></td>
+          <td>{{item.price|currency}}</td>
+          <td><button (click)="removeItem(item)" class="remove btn btn-danger border-0">Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="total border border-1 d-flex justify-content-center align-items-center">
+    <div>
+      <p class="text-muted">Count: {{count}}</p>
+      <p class="text-muted">Price: {{totalPrice|currency}}</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- {{cartItem[0].name}} -->

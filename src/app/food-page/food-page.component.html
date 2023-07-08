@@ -1,0 +1,38 @@
+<app-not-found [visible]="!food" message="No food exists" reset="Go To home page"></app-not-found>
+<div class="row m-5 w-75 mx-auto" *ngIf="food">
+  <div class="col-md-5">
+      <img [src]="food.imageUrl" [alt]="food.name" class="w-100">
+  </div>
+  <div class="col-md-4 ms-5 ">
+      <div class="d-flex justify-content-between align-items-center">
+        <span class="name fw-bold fs-4">{{food.name}}</span>
+        <span [ngClass]="{'fav':food.favorite,'not':!food.favorite}">❤</span>
+      </div>
+      <div class="stars">
+        <star-rating
+        [value]="food.stars"
+        [totalstars]="5"
+        checkedcolor="#e72929"
+        uncheckedcolor="black"
+        size="30px"
+        [readonly]="true"></star-rating>
+      </div>
+        <div class="origin">
+          <span *ngFor="let origin of food.origins" class="py-1 px-2 me-1 my-2 d-inline-block">
+            {{origin}}
+          </span>
+      </div>
+        <div class="tags">
+          <span *ngFor="let tag of food.tags" class="py-1 px-2 me-1 my-2 d-inline-block fw-bold">
+            {{tag}}
+          </span>
+      </div>
+      <div class="my-1">
+        <span class="time">Time to cook about <strong>{{food.cookTime}}</strong> minutes</span>
+      </div>
+      <p class="price">Price : <span>{{food.price | currency}}</span></p>
+
+    <button class="w-100 py-1" (click)="addToCart(food)"> Add To Cart</button>
+
+  </div>
+</div>

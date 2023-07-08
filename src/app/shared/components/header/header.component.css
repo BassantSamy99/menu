@@ -1,0 +1,13 @@
+header {
+padding: 1em 1.25em;
+border-bottom: 1px solid #e72929;
+}
+
+header .logo a{
+color:#af1313;
+font-size: 1.5em;
+}
+header ul li a {
+  color:#af1313;
+  font-size: 1.25em;
+}

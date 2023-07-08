@@ -1,0 +1,20 @@
+table {
+ border: 2px solid #eee;
+}
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.total {
+  width: 22.5%;
+  height: 250px;
+  border: 2px solid #eee;
+}
+.remove {
+  background-color: #eee;
+  color: #e72929;
+  border-radius: 20px;
+}
+

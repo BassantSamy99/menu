@@ -1,0 +1,33 @@
+img
+{
+  border-radius: 20px;
+  height: 350px;
+  object-fit: cover;
+}
+.fav
+{
+color: #e72929;
+}
+.not {
+color: gray;
+}
+.origin span {
+  background-color: #ddd;
+  border-radius: .8em;
+}
+.tags span
+{
+  color: blue;
+  background-color: #f0f0f0;
+  border-radius: .8em;
+}
+.price span {
+  color:green
+}
+button {
+border-style: none;
+background-color: #e72929;
+border-radius: 20px;
+color: white;
+font-weight: 600;
+}

@@ -1,0 +1,20 @@
+img {
+  border-radius: .5em .5em 0 0;
+}
+.foodItem .fav,.name {
+  color: #e72929;
+}
+.not {
+  color: gray;
+}
+.origin span {
+  background-color: #ddd;
+  border-radius: .5em;
+  font-size: 0.9em;
+}
+.price,.origin,.time {
+  color: black;
+}
+.time {
+  width: 40%;
+}

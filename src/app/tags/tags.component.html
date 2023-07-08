@@ -1,0 +1,6 @@
+<div class="tags d-flex justify-content-center ">
+  <a [routerLink]="['/tag',tag.name]" class="p-2 m-2 fw-bold" *ngFor="let tag of tags">
+    {{tag.name}}({{tag.count}})
+  </a>
+</div>
+

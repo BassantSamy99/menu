@@ -1,0 +1,17 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap"); */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+}

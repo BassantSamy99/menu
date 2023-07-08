@@ -1,0 +1,36 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<app-not-found [visible]="items.length<=0" reset="Reset Search"></app-not-found>
+<section class=" home my-5 d-md-grid" *ngIf="items">
+  <div class="row">
+    <div class="col-md-6 col-lg-3 mb-5 foodItem" *ngFor="let item of items">
+      <a class="text-decoration-none" [routerLink]="['/foodPage',item.id]">
+        <img [src]="item.imageUrl" class="w-100">
+        <div class="underImg px-2">
+          <div class="my-1 d-flex justify-content-between">
+            <span class="name">{{item.name}}</span>
+            <span [ngClass]="{'fav':item.favorite,'not':!item.favorite}">❤</span>
+          </div>
+          <div class="stars">
+            <star-rating
+            [value]="item.stars"
+            [totalstars]="5"
+            checkedcolor="#e72929"
+            uncheckedcolor="black"
+            size="20px"
+            [readonly]="true"></star-rating>
+          </div>
+          <div class="my-2 d-flex justify-content-between ">
+            <div class="origin w-75">
+              <span *ngFor="let origin of item.origins" class="p-1 m-1 d-inline-block">
+                {{origin}}
+              </span>
+          </div>
+            <span class="time mt-1">🕒 {{item.cookTime}}</span>
+          </div>
+          <p class="price m-0">{{item.price | currency}}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
